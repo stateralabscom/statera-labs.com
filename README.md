@@ -26,7 +26,7 @@ After the entity is formed, change the footer to **© 2026 Statera Labs LLC**.
 
 - apex `A` records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
   `185.199.111.153` (and `AAAA` `2606:50c0:8000::153` … `8003::153` for IPv6)
-- `www` `CNAME` → `jpfielding.github.io`
+- `www` `CNAME` → `stateralabscom.github.io`
 
 Then turn on **Enforce HTTPS** in the repository's Pages settings once the
 certificate is issued.
