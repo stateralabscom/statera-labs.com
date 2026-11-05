@@ -7,10 +7,11 @@ external requests. Open `index.html` directly to preview; keep `styles.css` and
 
 ## Direction and copy
 
-Warm parchment, terracotta, generous space, Newsreader headings and Hanken
-Grotesk body copy (fonts self-hosted under the OFL; licenses in `assets/`). The
-stacked sheets are a conceptual illustration, not a product screenshot or final
-logo.
+Ink blue, mineral gray and pale chartreuse; self-hosted Hanken Grotesk typography
+(font license in `assets/`). The custom arch illustration and related principle
+symbols express a common ground for counsel and clients. They are conceptual
+artwork, not a product screenshot or final logo. The page has three numbered
+sections: the product, our approach, and development status.
 
 Company: **Statera Labs**. Product: **Arca**. Lead line: **Good counsel. Clearer
 ground.** Positioning: legal case management for small practices, designed
