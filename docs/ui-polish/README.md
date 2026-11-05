@@ -14,7 +14,7 @@ can be reviewed at a readable scale.
 - Browser overflow checks at 320, 390, 768, 1280, and 1920 CSS pixels: no horizontal overflow.
 - Actual link activation: Discover Arca → `#arca`; Approach → `#approach`; Back to top → `#top`.
 - Keyboard: initial Tab reveals the skip link with a visible outline; Enter navigates to `#main`; next Tab reaches the main CTA, bypassing header navigation.
-- axe-core 4.14.0, WCAG A/AA/2.1 AA and best-practice rules: zero violations, 35 passing rules. Two symbol-only arrow contrast checks required manual review; their foreground/background ratio is 12.18:1.
+- axe-core 4.14.0, WCAG A/AA/2.1 AA and best-practice rules: zero violations, 32 passing rules. Symbol-only arrows and the status over the image required manual contrast review; arrow contrast is 12.18:1 and secondary text over the image’s top region exceeds 9.58:1.
 - Text color pairings: 4.96:1 minimum among the primary and muted text combinations. This is targeted contrast verification, not a claim of complete accessibility certification.
 - All local assets and fragment destinations exist; IDs are unique.
 - Formatting and `git diff --check` pass.
@@ -33,15 +33,15 @@ their final rubrics while retaining independent ratings.
 | Reviewer | Final score | Assessment                                                                            |
 | -------- | ----------- | ------------------------------------------------------------------------------------- |
 | UX       | 9.0 / 10    | Excellent clarity, reading hierarchy, and prelaunch framing.                          |
-| Visual   | 8.9 / 10    | Strong composition and identity; originality is strong rather than category-defining. |
-| Brand    | 8.6 / 10    | Polished and recognizable; more weight reserved for exceptional, ownable expression.  |
+| Visual   | 9.0 / 10    | Strong composition and identity; originality is strong rather than category-defining. |
+| Brand    | 8.8 / 10    | Polished and recognizable; more weight reserved for exceptional, ownable expression.  |
 
-The latest retained refinement separates the attorney and client/software-engineer
-perspectives into a compact paired origin section and strengthens the mobile
-headline. A paired-arch company-mark experiment was rejected; the solid mark
-remains. Retired experiment styles were removed without changing computed styles
-at the five checked viewport widths.
+The latest retained refinement uses custom generated conceptual artwork of layered
+arches. The image is a locally served 44 KB WebP, not a product screen. A compact
+mobile composition preserves reading pace. The founder origin retains separate
+attorney and client/software-engineer perspectives. All seven refreshed screenshots
+were independently reviewed by the original council.
 
-All three recommend shipping and report no material visible issue. Their
-remaining differences concern subjective weighting of distinctiveness, not an
-unresolved defect. These are agent assessments, not external user research.
+All three recommend retaining the revision and report no material visible issue.
+The brand reviewer still reserves a higher score for greater distinctiveness.
+The full goal remains open. These are agent assessments, not external user research.

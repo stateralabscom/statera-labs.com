@@ -8,9 +8,10 @@ external requests. Open `index.html` directly to preview; keep `styles.css` and
 ## Direction and copy
 
 Ink blue, mineral gray and pale chartreuse; self-hosted Hanken Grotesk typography
-(font license in `assets/`). The custom arch illustration and related principle
+(font license in `assets/`). The custom tactile arch illustration and related principle
 symbols express a common ground for counsel and clients. They are conceptual
-artwork, not a product screenshot or final logo. The page has three numbered
+artwork, not a product screenshot or final logo. The generated illustration is
+served locally as a 44 KB WebP; no image service is contacted at runtime. The page has three numbered
 sections: the founding perspectives, our approach, and development status.
 
 Company: **Statera Labs**. Product: **Arca**. Lead line: **The work goes beyond the files.** Positioning: legal case management for small practices, designed
