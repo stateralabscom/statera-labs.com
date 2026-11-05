@@ -215,11 +215,6 @@ h1 {
   padding: 76px 0;
   scroll-margin-top: 24px;
 }
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 44px;
-}
 .section-label {
   display: flex;
   align-items: start;
@@ -237,23 +232,6 @@ h2 {
   font-weight: 450;
   letter-spacing: -0.05em;
   line-height: 1.08;
-}
-.product-copy > p {
-  max-width: 550px;
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--muted);
-  margin-top: 27px;
-}
-.product-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  max-width: 550px;
-  border-top: 1px solid #b9c6c7;
-  margin-top: 32px;
-  padding-top: 18px;
-  font-size: 12px;
 }
 .approach {
   scroll-margin-top: 24px;
@@ -395,8 +373,7 @@ h3 {
   .hero-art {
     padding: 22px;
   }
-  .approach-heading,
-  .product-grid {
+  .approach-heading {
     grid-template-columns: 1fr 2fr;
     gap: 30px;
   }
@@ -484,8 +461,7 @@ h3 {
   .product {
     padding: 43px 0;
   }
-  .approach-heading,
-  .product-grid {
+  .approach-heading {
     grid-template-columns: 1fr;
     gap: 28px;
   }
@@ -495,14 +471,6 @@ h3 {
   }
   h2 {
     font-size: 39px;
-  }
-  .product-copy > p {
-    font-size: 16px;
-    margin-top: 22px;
-  }
-  .product-meta {
-    font-size: 12px;
-    margin-top: 25px;
   }
   .approach {
     padding-block: 43px 33px;
@@ -587,9 +555,6 @@ h3 {
   }
   .closing-grid {
     gap: 20px;
-  }
-  .product-meta {
-    gap: 10px;
   }
   .footer {
     gap: 16px;
@@ -901,4 +866,97 @@ h3 {
   .audience-rest {
     display: block;
   }
+}
+
+/* The founding insight is a paired perspective, not a feature grid. */
+.origin-heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 44px;
+}
+.perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 52px;
+}
+.perspective {
+  border-top: 1px solid #acbcbe;
+  padding-top: 24px;
+}
+.perspective-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.perspective > p:last-child {
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+@media (max-width: 1100px) {
+  .origin-heading {
+    gap: 30px;
+  }
+  .perspectives {
+    gap: 36px;
+  }
+}
+@media (max-width: 760px) {
+  .origin-heading {
+    display: block;
+  }
+  .origin-heading h2 {
+    margin-top: 28px;
+    font-size: 36px;
+  }
+  .perspectives {
+    display: block;
+    margin-top: 32px;
+  }
+  .perspective {
+    padding-top: 22px;
+  }
+  .perspective + .perspective {
+    margin-top: 28px;
+  }
+  .perspective > p:last-child {
+    font-size: 15px;
+  }
+}
+
+.perspective > p:last-child {
+  margin-top: 22px;
+  font-size: 18px;
+  max-width: 480px;
+}
+@media (max-width: 760px) {
+  .origin-heading h2 {
+    font-size: 36px;
+  }
+  .perspectives {
+    margin-top: 28px;
+  }
+  .perspective > p:last-child {
+    margin-top: 14px;
+    font-size: 16px;
+  }
+  .perspective + .perspective {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  h1 {
+    font-size: clamp(39px, 12.2vw, 68px);
+  }
+}
+
+.perspective-label h3 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1.6px;
 }

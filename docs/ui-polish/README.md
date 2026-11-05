@@ -14,7 +14,7 @@ can be reviewed at a readable scale.
 - Browser overflow checks at 320, 390, 768, 1280, and 1920 CSS pixels: no horizontal overflow.
 - Actual link activation: Discover Arca → `#arca`; Approach → `#approach`; Back to top → `#top`.
 - Keyboard: initial Tab reveals the skip link with a visible outline; Enter navigates to `#main`; next Tab reaches the main CTA, bypassing header navigation.
-- axe-core 4.10.3, WCAG A/AA/2.1 AA and best-practice rules: zero violations, 36 passing rules. Two symbol-only arrow contrast checks required manual review; their foreground/background ratio is 12.18:1.
+- axe-core 4.14.0, WCAG A/AA/2.1 AA and best-practice rules: zero violations, 35 passing rules. Two symbol-only arrow contrast checks required manual review; their foreground/background ratio is 12.18:1.
 - Text color pairings: 4.96:1 minimum among the primary and muted text combinations. This is targeted contrast verification, not a claim of complete accessibility certification.
 - All local assets and fragment destinations exist; IDs are unique.
 - Formatting and `git diff --check` pass.
@@ -34,7 +34,13 @@ their final rubrics while retaining independent ratings.
 | -------- | ----------- | ------------------------------------------------------------------------------------- |
 | UX       | 9.0 / 10    | Excellent clarity, reading hierarchy, and prelaunch framing.                          |
 | Visual   | 8.9 / 10    | Strong composition and identity; originality is strong rather than category-defining. |
-| Brand    | 8.5 / 10    | Polished and recognizable; more weight reserved for exceptional, ownable expression.  |
+| Brand    | 8.6 / 10    | Polished and recognizable; more weight reserved for exceptional, ownable expression.  |
+
+The latest retained refinement separates the attorney and client/software-engineer
+perspectives into a compact paired origin section and strengthens the mobile
+headline. A paired-arch company-mark experiment was rejected; the solid mark
+remains. Retired experiment styles were removed without changing computed styles
+at the five checked viewport widths.
 
 All three recommend shipping and report no material visible issue. Their
 remaining differences concern subjective weighting of distinctiveness, not an
