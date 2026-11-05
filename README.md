@@ -7,16 +7,22 @@ external requests. Open `index.html` directly to preview; keep `styles.css` and
 
 ## Direction and copy
 
-Warm parchment, terracotta, generous space, Newsreader headings and Hanken
-Grotesk body copy (fonts self-hosted under the OFL; licenses in `assets/`). The
-stacked sheets are a conceptual illustration, not a product screenshot or final
-logo.
+Ink blue, mineral gray and pale chartreuse; self-hosted Hanken Grotesk typography
+(font license in `assets/`). The custom tactile arch illustration and related principle
+symbols express a common ground for counsel and clients. They are conceptual
+artwork, not a product screenshot or final logo. The generated illustration is
+served locally as a 44 KB WebP; no image service is contacted at runtime. The page has three numbered
+sections: the founding perspectives, our approach, and development status.
 
-Company: **Statera Labs**. Product: **Arca**. Lead line: **Good counsel. Clearer
-ground.** Positioning: legal case management for small practices, designed
+Company: **Statera Labs**. Product: **Arca**. Lead line: **The work goes beyond the files.** Positioning: legal case management for small practices, designed
 around counsel and clients. The copy hints at intent without promising planned
 behavior, a launch date, pricing, customers, certifications or a demo. There is
 no signup and nothing is collected.
+
+The origin story reflects the founder’s account: their attorney found existing
+legal tools disconnected and misaligned with the work; as a client and software
+engineer, the founder saw complex tasks left unsupported by modern tooling and
+AI. This is a founding perspective, not a customer testimonial or product claim.
 
 After the entity is formed, change the footer to **© 2026 Statera Labs LLC**.
 
