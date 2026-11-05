@@ -19,6 +19,11 @@ around counsel and clients. The copy hints at intent without promising planned
 behavior, a launch date, pricing, customers, certifications or a demo. There is
 no signup and nothing is collected.
 
+The origin story reflects the founder’s account: their attorney found existing
+legal tools disconnected and misaligned with the work; as a client and software
+engineer, the founder saw complex tasks left unsupported by modern tooling and
+AI. This is a founding perspective, not a customer testimonial or product claim.
+
 After the entity is formed, change the footer to **© 2026 Statera Labs LLC**.
 
 ## Domain

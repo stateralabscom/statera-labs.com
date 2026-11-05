@@ -1,6 +1,6 @@
 @font-face {
   font-family: Hanken;
-  src: url("assets/hanken-grotesk-latin.woff2") format("woff2");
+  src: url(assets/hanken-grotesk-latin.woff2) format("woff2");
   font-weight: 100 900;
   font-display: swap;
 }
@@ -20,7 +20,10 @@
 * {
   box-sizing: border-box;
 }
-body {
+body,
+figure,
+h2,
+p {
   margin: 0;
 }
 a {
@@ -30,13 +33,6 @@ a {
 a:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 6px;
-}
-h1,
-h2,
-h3,
-p,
-figure {
-  margin: 0;
 }
 svg {
   display: block;
@@ -52,14 +48,16 @@ svg {
 }
 .header {
   height: 104px;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid var(--line);
 }
+.header,
+.header nav a,
 .wordmark {
   display: flex;
   align-items: center;
+}
+.wordmark {
   gap: 10px;
   font-weight: 650;
   font-size: 29px;
@@ -83,8 +81,6 @@ svg {
   font-size: 14px;
 }
 .header nav a {
-  display: flex;
-  align-items: center;
   gap: 23px;
   min-height: 44px;
 }
@@ -128,6 +124,10 @@ h1 {
   max-width: 365px;
   margin-top: 12px;
 }
+.button,
+.hero-art {
+  background: var(--ink);
+}
 .button {
   margin-top: 30px;
   display: inline-flex;
@@ -136,7 +136,6 @@ h1 {
   gap: 53px;
   min-height: 50px;
   padding: 0 21px;
-  background: var(--ink);
   color: var(--paper);
   font-size: 14px;
   transition: background 0.2s;
@@ -145,28 +144,31 @@ h1 {
   background: var(--blue);
 }
 .hero-art {
-  background: var(--ink);
   color: var(--lime);
   position: relative;
   min-width: 0;
   padding: 24px 26px 27px;
 }
-.art-top {
+.art-top,
+.hero-art figcaption {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+}
+.art-top,
+.status {
+  align-items: center;
+  font-size: 12px;
+}
+.art-top {
   gap: 12px;
   color: #d8e1e3;
-  font-size: 12px;
   letter-spacing: 1px;
 }
 .status {
   display: inline-flex;
-  align-items: center;
   gap: 7px;
   white-space: nowrap;
   letter-spacing: 0;
-  font-size: 12px;
 }
 .status i {
   width: 5px;
@@ -187,15 +189,13 @@ h1 {
   stroke: var(--ink);
   stroke-width: 1.8;
 }
-.ground,
-.cross {
+.cross,
+.ground {
   fill: none;
   stroke: #91a3a9;
   stroke-width: 1;
 }
 .hero-art figcaption {
-  display: flex;
-  justify-content: space-between;
   align-items: end;
   padding-top: 4px;
 }
@@ -209,26 +209,6 @@ h1 {
   font-size: 12px;
   line-height: 1.45;
   color: #d8e1e3;
-}
-.hero-foot {
-  grid-column: 1/-1;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  padding: 31px 0 30px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--muted);
-}
-.hero-foot a {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  min-height: 44px;
-}
-.hero-foot a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 .product {
   background: #dfe6e5;
@@ -276,7 +256,6 @@ h2 {
   font-size: 12px;
 }
 .approach {
-  padding-block: 78px 49px;
   scroll-margin-top: 24px;
 }
 .approach-heading {
@@ -287,7 +266,6 @@ h2 {
 .principles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 48px;
   border-top: 1px solid var(--line);
 }
 .principles article {
@@ -307,11 +285,8 @@ h2 {
   justify-content: space-between;
 }
 .principle-top svg {
-  width: 48px;
-  height: 48px;
   fill: none;
   stroke: var(--blue);
-  stroke-width: 1.3;
 }
 h3 {
   font-size: 29px;
@@ -321,15 +296,11 @@ h3 {
   margin: 31px 0 18px;
 }
 .principles p {
-  max-width: 310px;
   font-size: 15px;
   line-height: 1.7;
-  color: var(--muted);
 }
-.approach-note {
-  font-size: 12px;
+.principles p {
   color: var(--muted);
-  margin-top: 38px;
 }
 .closing {
   background: var(--ink);
@@ -338,8 +309,6 @@ h3 {
 }
 .closing-grid {
   display: grid;
-  grid-template-columns: 1fr 1.7fr 0.3fr;
-  gap: 44px;
 }
 .closing .index {
   color: #b2c0c7;
@@ -375,7 +344,6 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  font-size: 12px;
   color: var(--muted);
 }
 .footer .wordmark {
@@ -393,7 +361,7 @@ h3 {
   left: 12px;
   transform: translateY(-200%);
   background: var(--ink);
-  color: white;
+  color: #fff;
   padding: 12px 20px;
 }
 .skip-link:focus {
@@ -427,8 +395,8 @@ h3 {
   .hero-art {
     padding: 22px;
   }
-  .product-grid,
-  .approach-heading {
+  .approach-heading,
+  .product-grid {
     grid-template-columns: 1fr 2fr;
     gap: 30px;
   }
@@ -500,9 +468,9 @@ h3 {
   }
   .art-top {
     flex-wrap: wrap;
-    font-size: 12px;
     letter-spacing: 0.6px;
   }
+  .art-top,
   .status {
     font-size: 12px;
   }
@@ -513,14 +481,11 @@ h3 {
   .art-name {
     font-size: 53px;
   }
-  .hero-foot {
-    padding: 0 0 27px;
-  }
   .product {
     padding: 43px 0;
   }
-  .product-grid,
-  .approach-heading {
+  .approach-heading,
+  .product-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
@@ -569,11 +534,6 @@ h3 {
   .principles p {
     max-width: 480px;
   }
-  .approach-note {
-    margin-top: 0;
-    max-width: 275px;
-    line-height: 1.6;
-  }
   .closing {
     padding: 40px 0;
   }
@@ -603,9 +563,7 @@ h3 {
   .footer .wordmark {
     width: 100%;
   }
-  .footer p {
-    font-size: 12px;
-  }
+  .footer p,
   .footer > span {
     font-size: 12px;
   }
@@ -648,8 +606,6 @@ h3 {
     transition: none !important;
   }
 }
-
-/* The principles use an editorial rail rather than a feature-card grid. */
 .hero {
   padding-bottom: 56px;
 }
@@ -659,15 +615,14 @@ h3 {
   column-gap: 76px;
   padding-block: 76px;
 }
-.approach-heading {
+.approach-heading,
+.principles {
   display: block;
 }
 .approach-heading h2 {
   margin-top: 30px;
-  font-size: clamp(32px, 3vw, 44px);
 }
 .principles {
-  display: block;
   margin-top: 0;
   border-top: 0;
 }
@@ -697,17 +652,8 @@ h3 {
 .principles p {
   max-width: 440px;
 }
-.approach-note {
-  grid-column: 2;
-  font-size: 13px;
-  line-height: 1.6;
-  margin-top: 4px;
-}
 .footer {
   font-size: 13px;
-}
-.closing-grid {
-  grid-template-columns: 1fr 2fr auto;
 }
 @media (max-width: 1100px) {
   .approach {
@@ -791,11 +737,6 @@ h3 {
   .principles p {
     font-size: 15px;
   }
-  .approach-note {
-    font-size: 13px;
-    max-width: none;
-    padding-top: 3px;
-  }
   .closing-grid {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -813,9 +754,7 @@ h3 {
     right: 0;
     bottom: 0;
   }
-  .footer {
-    font-size: 12px;
-  }
+  .footer,
   .footer p,
   .footer > span {
     font-size: 12px;
@@ -849,8 +788,6 @@ h3 {
     max-width: 235px;
   }
 }
-
-/* Keep introduction and closing on the same primary column. */
 .closing-grid {
   grid-template-columns: 1fr 2fr;
   gap: 44px;
@@ -860,9 +797,6 @@ h3 {
   position: absolute;
   right: 0;
   bottom: 0;
-}
-.approach-heading h2 {
-  font-size: clamp(40px, 4vw, 56px);
 }
 @media (max-width: 1100px) {
   .closing-grid {
@@ -913,7 +847,6 @@ h3 {
     height: 202px;
   }
 }
-
 .approach-heading h2 {
   font-size: clamp(34px, 3.2vw, 46px);
 }
@@ -926,17 +859,26 @@ h3 {
     letter-spacing: -0.05em;
   }
   .header {
-    flex-wrap: wrap;
-    height: auto;
+    flex-wrap: nowrap;
     min-height: 84px;
-    padding-block: 20px 12px;
-    row-gap: 8px;
+    padding-block: 0;
+    gap: 12px;
+  }
+  .header .wordmark {
+    font-size: 23px;
+    gap: 5px;
   }
   .header nav {
-    width: 100%;
-    justify-content: space-between;
-    border-top: 1px solid var(--line);
-    padding-top: 4px;
+    width: auto;
+    gap: 18px;
+    border: 0;
+    padding: 0;
+  }
+  .header nav a {
+    gap: 0;
+  }
+  .header nav a span {
+    display: none;
   }
   .header nav a:last-child {
     display: flex;
@@ -945,5 +887,12 @@ h3 {
 @media (max-width: 360px) {
   .closing h2 {
     font-size: 28px;
+  }
+  .header nav {
+    gap: 12px;
+    font-size: 11px;
+  }
+  .header .wordmark {
+    font-size: 21px;
   }
 }
