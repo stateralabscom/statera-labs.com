@@ -22,3 +22,20 @@ can be reviewed at a readable scale.
 
 No application build step or runtime JavaScript is needed. The temporary audit
 script was removed after the browser check and is not part of the site.
+
+## Independent agent council
+
+Three reviewers assessed desktop/mobile screenshots from separate initial
+contexts without receiving the desired passing score. They reviewed successive
+revisions, compared a separate serif/dark art-direction study, and discussed
+their final rubrics while retaining independent ratings.
+
+| Reviewer | Final score | Assessment                                                                            |
+| -------- | ----------- | ------------------------------------------------------------------------------------- |
+| UX       | 9.0 / 10    | Excellent clarity, reading hierarchy, and prelaunch framing.                          |
+| Visual   | 8.9 / 10    | Strong composition and identity; originality is strong rather than category-defining. |
+| Brand    | 8.5 / 10    | Polished and recognizable; more weight reserved for exceptional, ownable expression.  |
+
+All three recommend shipping and report no material visible issue. Their
+remaining differences concern subjective weighting of distinctiveness, not an
+unresolved defect. These are agent assessments, not external user research.

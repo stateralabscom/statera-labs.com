@@ -13,8 +13,7 @@ symbols express a common ground for counsel and clients. They are conceptual
 artwork, not a product screenshot or final logo. The page has three numbered
 sections: the product, our approach, and development status.
 
-Company: **Statera Labs**. Product: **Arca**. Lead line: **Good counsel. Clearer
-ground.** Positioning: legal case management for small practices, designed
+Company: **Statera Labs**. Product: **Arca**. Lead line: **The work goes beyond the files.** Positioning: legal case management for small practices, designed
 around counsel and clients. The copy hints at intent without promising planned
 behavior, a launch date, pricing, customers, certifications or a demo. There is
 no signup and nothing is collected.
