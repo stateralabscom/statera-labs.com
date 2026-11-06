@@ -64,12 +64,22 @@ svg {
   letter-spacing: -1.4px;
   line-height: 1;
 }
-.wordmark svg {
+.wordmark svg,
+.arca-mark {
   width: 32px;
   height: 32px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.wordmark .solid,
+.arca-mark .solid {
+  fill: currentColor;
+  stroke: none;
+}
+.arca-mark .knock {
+  stroke: var(--ink);
 }
 .labs {
   font-weight: 400;
@@ -181,10 +191,18 @@ h1 {
   padding-top: 4px;
 }
 .art-name {
+  display: flex;
+  align-items: center;
+  gap: 0.22em;
   font-size: 60px;
   line-height: 0.9;
   letter-spacing: -4px;
   font-weight: 450;
+}
+.arca-mark {
+  width: 0.82em;
+  height: 0.82em;
+  flex: none;
 }
 .hero-art figcaption > span:last-child {
   font-size: 12px;
@@ -627,6 +645,9 @@ h3 {
   }
   .hero-art figcaption > span {
     display: block;
+  }
+  .hero-art .arca-mark {
+    margin-bottom: 0.2em;
   }
   .hero-art figcaption > span:last-child {
     margin-top: 16px;
