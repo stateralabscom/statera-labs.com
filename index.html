@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Statera Labs — The work goes beyond the files.</title>
+    <title>Statera Labs — Good counsel. Clearer ground.</title>
     <meta
       name="description"
       content="Meet Arca, legal case management in development for small practices. From Statera Labs. Designed around counsel and clients."
     />
-    <meta name="theme-color" content="#edf0ed" />
+    <meta name="theme-color" content="#f6f1e9" />
     <meta
       property="og:title"
-      content="Statera Labs — The work goes beyond the files."
+      content="Statera Labs — Good counsel. Clearer ground."
     />
     <meta
       property="og:description"
@@ -22,6 +22,13 @@
     <link
       rel="preload"
       href="assets/hanken-grotesk-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/newsreader-latin.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -58,7 +65,7 @@
       <section class="hero wrap" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">Legal case management</p>
-          <h1 id="hero-title">The work goes<br />beyond the files.</h1>
+          <h1 id="hero-title">Good counsel.<br />Clearer <em>ground.</em></h1>
           <p class="lede">
             For small practices.<span class="audience-rest">
               For the whole matter.</span
@@ -72,39 +79,32 @@
             >Discover Arca <span aria-hidden="true">↓</span></a
           >
         </div>
-        <figure class="hero-art tactile-art">
-          <div class="art-top">
-            <span>ARCA / BY STATERA LABS</span
-            ><span class="status"
-              ><i aria-hidden="true"></i> In development</span
-            >
+        <figure class="book-art">
+          <div class="orbit" aria-hidden="true"></div>
+          <div class="orbit orbit-wide" aria-hidden="true"></div>
+          <div class="art-line" aria-hidden="true"></div>
+          <div class="sheet sheet-back" aria-hidden="true"></div>
+          <div class="sheet sheet-mid" aria-hidden="true"></div>
+          <div class="sheet sheet-front">
+            <div class="cover-top">
+              <span>ARCA / BY STATERA LABS</span
+              ><span class="cover-status"
+                ><i aria-hidden="true"></i> In development</span
+              >
+            </div>
+            <svg class="cover-mark" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M5 22.5V20a19 9 0 0 1 38 0v2.5" stroke-width="2.6" />
+              <rect x="5" y="22.5" width="38" height="18.5" rx="1.6" stroke-width="2.6" />
+              <path d="M15 41V33a9 9 0 0 1 18 0v8" stroke-width="1.6" />
+              <path class="seal" stroke-width="1.6" d="M29.94 24.00C29.92 24.73 29.48 25.42 29.25 26.17C29.02 26.93 29.06 28.05 28.54 28.54C28.02 29.04 26.89 28.86 26.13 29.14C25.37 29.43 24.74 30.19 24.00 30.25C23.26 30.32 22.36 29.93 21.70 29.54C21.05 29.15 20.65 28.45 20.08 27.92C19.51 27.39 18.53 27.03 18.26 26.38C18.00 25.72 18.47 24.79 18.49 24.00C18.51 23.21 18.10 22.32 18.36 21.67C18.63 21.01 19.49 20.54 20.07 20.07C20.65 19.60 21.21 19.19 21.86 18.83C22.52 18.48 23.22 18.08 24.00 17.91C24.78 17.74 25.89 17.47 26.56 17.82C27.22 18.17 27.52 19.35 27.99 20.01C28.45 20.67 29.02 21.12 29.35 21.78C29.67 22.45 29.95 23.27 29.94 24.00Z" />
+              <circle class="imp" cx="24" cy="24" r="3.4" stroke-width="1" />
+            </svg>
+            <div class="cover-bottom">
+              <span class="cover-name">Arca</span>
+              <span>A clearer way forward.</span>
+            </div>
           </div>
-          <img
-            class="paper-art"
-            src="assets/arca-arch.webp"
-            width="1254"
-            height="1254"
-            alt="Conceptual artwork of five layered arches forming a single passage."
-          />
-          <figcaption>
-            <span class="art-name"
-              ><svg class="arca-mark" viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M3 15v-2.5a13 6.5 0 0 1 26 0V15Z" stroke-width="2.2" />
-                <path
-                  d="M4.5 15h23v11.8a1.2 1.2 0 0 1-1.2 1.2H5.7a1.2 1.2 0 0 1-1.2-1.2Z"
-                  stroke-width="2.2"
-                />
-                <path d="M9 7.2V28M23 7.2V28" stroke-width="1.7" />
-                <path class="knock" stroke-width="2.8" d="M17.78 12.03C18.47 12.22 19.34 12.53 19.80 13.06C20.25 13.58 20.28 14.48 20.49 15.20C20.70 15.91 21.11 16.65 21.04 17.34C20.97 18.03 20.51 18.81 20.06 19.35C19.60 19.89 18.93 20.19 18.32 20.58C17.71 20.97 17.10 21.53 16.40 21.68C15.69 21.83 14.75 21.79 14.10 21.49C13.46 21.18 13.00 20.41 12.53 19.84C12.05 19.28 11.42 18.74 11.23 18.09C11.04 17.43 11.31 16.65 11.39 15.92C11.48 15.19 11.39 14.32 11.74 13.72C12.09 13.12 12.86 12.62 13.51 12.32C14.16 12.02 14.92 11.96 15.63 11.91C16.34 11.86 17.08 11.84 17.78 12.03Z" />
-                <path class="solid" d="M17.78 12.03C18.47 12.22 19.34 12.53 19.80 13.06C20.25 13.58 20.28 14.48 20.49 15.20C20.70 15.91 21.11 16.65 21.04 17.34C20.97 18.03 20.51 18.81 20.06 19.35C19.60 19.89 18.93 20.19 18.32 20.58C17.71 20.97 17.10 21.53 16.40 21.68C15.69 21.83 14.75 21.79 14.10 21.49C13.46 21.18 13.00 20.41 12.53 19.84C12.05 19.28 11.42 18.74 11.23 18.09C11.04 17.43 11.31 16.65 11.39 15.92C11.48 15.19 11.39 14.32 11.74 13.72C12.09 13.12 12.86 12.62 13.51 12.32C14.16 12.02 14.92 11.96 15.63 11.91C16.34 11.86 17.08 11.84 17.78 12.03Z" />
-                <path
-                  class="knock"
-                  stroke-width="1.6"
-                  d="M14.2 18.4l3.5-3.5M15.3 14.9h2.4v2.4"
-                /></svg
-              >Arca</span
-            ><span>A clearer way<br />forward.</span>
-          </figcaption>
+          <figcaption>The matter. The people. The way forward.</figcaption>
         </figure>
       </section>
       <section class="product" id="arca" aria-labelledby="arca-title">

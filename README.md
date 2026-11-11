@@ -7,14 +7,17 @@ external requests. Open `index.html` directly to preview; keep `styles.css` and
 
 ## Direction and copy
 
-Ink blue, mineral gray and pale chartreuse; self-hosted Hanken Grotesk typography
-(font license in `assets/`). The custom tactile arch illustration and related principle
-symbols express a common ground for counsel and clients. They are conceptual
-artwork, not a product screenshot or final logo. The generated illustration is
-served locally as a 44 KB WebP; no image service is contacted at runtime. The page has three numbered
+Arca's own palette: parchment, ink and terracotta, with oxblood sealing wax used
+only in the Arca mark. Self-hosted type: Newsreader for headings (as in Arca
+itself) and Hanken Grotesk for text; font licenses are in `assets/`. The
+Newsreader italic is a Latin subset fixed at weight 400 and display size,
+because it sets only a headline word. Statera Labs' mark is a steelyard (*statera*); Arca's is a sealed
+chest (*arca*) with an arch on its face, drawn inline as SVG. The principle
+symbols are arches expressing a common ground for counsel and clients. Nothing
+is loaded from an outside service at runtime. The page has three numbered
 sections: the founding perspectives, our approach, and development status.
 
-Company: **Statera Labs**. Product: **Arca**. Lead line: **The work goes beyond the files.** Positioning: legal case management for small practices, designed
+Company: **Statera Labs**. Product: **Arca**. Lead line: **Good counsel. Clearer ground.** Positioning: legal case management for small practices, designed
 around counsel and clients. The copy hints at intent without promising planned
 behavior, a launch date, pricing, customers, certifications or a demo. There is
 no signup and nothing is collected.
