@@ -4,13 +4,33 @@
   font-weight: 100 900;
   font-display: swap;
 }
+@font-face {
+  font-family: Newsreader;
+  src: url(assets/newsreader-latin.woff2) format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+/* Italic subset: Latin only, fixed at weight 400 and display size (it sets only headline words). */
+@font-face {
+  font-family: Newsreader;
+  src: url(assets/newsreader-italic-latin.woff2) format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
 :root {
-  --paper: #edf0ed;
-  --ink: #172e40;
-  --muted: #51636b;
-  --line: #c9d2d1;
-  --lime: #d7ec97;
-  --blue: #24455b;
+  /* Arca's own palette: parchment, ink and terracotta. */
+  --paper: #f6f1e9;
+  --panel: #ebe3d6;
+  --ink: #2c2722;
+  --muted: #655c53;
+  --line: #d8cfc2;
+  --line-strong: #c9bca9;
+  --accent: #a24d2d; /* terracotta that reads 5:1 on paper and under cream */
+  --cream: #fff7ee;
+  --glow: #e8b79e; /* light terracotta for headlines on ink */
+  --on-ink: #c9bfae;
+  --seal: #6e1f2b; /* the wax: Arca's mark only, never a UI colour */
   font-family: Hanken, Arial, sans-serif;
   color: var(--ink);
   background: var(--paper);
@@ -38,7 +58,7 @@ svg {
   display: block;
 }
 ::selection {
-  background: var(--lime);
+  background: var(--glow);
   color: var(--ink);
 }
 .wrap {
@@ -64,8 +84,7 @@ svg {
   letter-spacing: -1.4px;
   line-height: 1;
 }
-.wordmark svg,
-.arca-mark {
+.wordmark svg {
   width: 32px;
   height: 32px;
   fill: none;
@@ -73,14 +92,11 @@ svg {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.wordmark .solid,
-.arca-mark .solid {
+.wordmark .solid {
   fill: currentColor;
   stroke: none;
 }
-.arca-mark .knock {
-  stroke: var(--ink);
-}
+
 .labs {
   font-weight: 400;
   margin-left: 5px;
@@ -114,6 +130,10 @@ svg {
   text-transform: uppercase;
   line-height: 1.5;
 }
+h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
 h1 {
   font-size: clamp(48px, 5.6vw, 84px);
   line-height: 1.04;
@@ -134,10 +154,10 @@ h1 {
   max-width: 365px;
   margin-top: 12px;
 }
-.button,
-.hero-art {
+.button {
   background: var(--ink);
 }
+
 .button {
   margin-top: 30px;
   display: inline-flex;
@@ -151,66 +171,11 @@ h1 {
   transition: background 0.2s;
 }
 .button:hover {
-  background: var(--blue);
+  background: var(--accent);
 }
-.hero-art {
-  color: var(--lime);
-  position: relative;
-  min-width: 0;
-  padding: 24px 26px 27px;
-}
-.art-top,
-.hero-art figcaption {
-  display: flex;
-  justify-content: space-between;
-}
-.art-top,
-.status {
-  align-items: center;
-  font-size: 12px;
-}
-.art-top {
-  gap: 12px;
-  color: #d8e1e3;
-  letter-spacing: 1px;
-}
-.status {
-  display: inline-flex;
-  gap: 7px;
-  white-space: nowrap;
-  letter-spacing: 0;
-}
-.status i {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: currentColor;
-}
-.hero-art figcaption {
-  align-items: end;
-  padding-top: 4px;
-}
-.art-name {
-  display: flex;
-  align-items: center;
-  gap: 0.22em;
-  font-size: 60px;
-  line-height: 0.9;
-  letter-spacing: -4px;
-  font-weight: 450;
-}
-.arca-mark {
-  width: 0.82em;
-  height: 0.82em;
-  flex: none;
-}
-.hero-art figcaption > span:last-child {
-  font-size: 12px;
-  line-height: 1.45;
-  color: #d8e1e3;
-}
+
 .product {
-  background: #dfe6e5;
+  background: var(--panel);
   padding: 76px 0;
   scroll-margin-top: 24px;
 }
@@ -263,7 +228,7 @@ h2 {
 }
 .principle-top svg {
   fill: none;
-  stroke: var(--blue);
+  stroke: var(--accent);
 }
 h3 {
   font-size: 29px;
@@ -288,23 +253,23 @@ h3 {
   display: grid;
 }
 .closing .index {
-  color: #b2c0c7;
+  color: var(--on-ink);
 }
 .closing h2 {
   font-size: clamp(36px, 3.7vw, 52px);
-  color: var(--lime);
+  color: var(--glow);
 }
 .closing p:not(.eyebrow) {
   max-width: 460px;
   font-size: 16px;
   line-height: 1.7;
-  color: #c2cdd1;
+  color: var(--on-ink);
   margin-top: 24px;
 }
 .back-top {
   align-self: end;
   justify-self: end;
-  border: 1px solid #6d828f;
+  border: 1px solid rgba(255, 247, 238, 0.4);
   width: 48px;
   height: 48px;
   display: grid;
@@ -313,7 +278,7 @@ h3 {
   transition: background 0.2s;
 }
 .back-top:hover {
-  background: var(--blue);
+  background: var(--accent);
 }
 .footer {
   padding-block: 32px;
@@ -366,12 +331,7 @@ h3 {
   .hero-copy {
     padding-top: 12px;
   }
-  .art-top {
-    flex-wrap: wrap;
-  }
-  .hero-art {
-    padding: 22px;
-  }
+
   .approach-heading {
     grid-template-columns: 1fr 2fr;
     gap: 30px;
@@ -436,23 +396,7 @@ h3 {
   .button {
     margin-top: 25px;
   }
-  .hero-art {
-    padding: 22px 24px;
-    max-width: 540px;
-    width: 100%;
-    justify-self: center;
-  }
-  .art-top {
-    flex-wrap: wrap;
-    letter-spacing: 0.6px;
-  }
-  .art-top,
-  .status {
-    font-size: 12px;
-  }
-  .art-name {
-    font-size: 53px;
-  }
+
   .product {
     padding: 43px 0;
   }
@@ -475,8 +419,8 @@ h3 {
     margin-top: 31px;
   }
   .principles article,
-  .principles article:first-child,
-  .principles article:last-child {
+.principles article:first-child,
+.principles article:last-child {
     border-right: 0;
     padding: 21px 0 26px;
   }
@@ -527,7 +471,7 @@ h3 {
     width: 100%;
   }
   .footer p,
-  .footer > span {
+.footer > span {
     font-size: 12px;
   }
 }
@@ -538,13 +482,7 @@ h3 {
   h1 {
     font-size: 39px;
   }
-  .art-top {
-    gap: 5px;
-    font-size: 12px;
-  }
-  .hero-art {
-    padding: 20px;
-  }
+
   .closing h2 {
     font-size: 29px;
   }
@@ -620,8 +558,8 @@ h3 {
     column-gap: 36px;
   }
   .principles article,
-  .principles article:first-child,
-  .principles article:last-child {
+.principles article:first-child,
+.principles article:last-child {
     padding-left: 74px;
   }
   .principle-top svg {
@@ -634,36 +572,7 @@ h3 {
     padding-bottom: 36px;
     gap: 30px;
   }
-  .hero-art {
-    height: 264px;
-  }
-  .hero-art figcaption {
-    position: absolute;
-    bottom: 28px;
-    left: 24px;
-    display: block;
-  }
-  .hero-art figcaption > span {
-    display: block;
-  }
-  .hero-art .arca-mark {
-    margin-bottom: 0.2em;
-  }
-  .hero-art figcaption > span:last-child {
-    margin-top: 16px;
-    font-size: 12px;
-  }
-  .hero-art .art-name {
-    font-size: 47px;
-    letter-spacing: -2.5px;
-  }
-  .art-top {
-    font-size: 10px;
-    letter-spacing: 0.5px;
-  }
-  .art-top .status {
-    font-size: 11px;
-  }
+
   .approach {
     display: block;
     padding-block: 43px 35px;
@@ -676,8 +585,8 @@ h3 {
     margin-top: 30px;
   }
   .principles article,
-  .principles article:first-child,
-  .principles article:last-child {
+.principles article:first-child,
+.principles article:last-child {
     padding: 22px 0 26px 62px;
   }
   .principle-top svg {
@@ -710,28 +619,13 @@ h3 {
     bottom: 0;
   }
   .footer,
-  .footer p,
-  .footer > span {
+.footer p,
+.footer > span {
     font-size: 12px;
   }
 }
 @media (max-width: 360px) {
-  .hero-art {
-    height: 248px;
-    padding: 18px;
-  }
-  .hero-art figcaption {
-    left: 18px;
-  }
-  .hero-art .art-name {
-    font-size: 42px;
-  }
-  .art-top {
-    font-size: 9px;
-  }
-  .art-top .status {
-    font-size: 10px;
-  }
+
   .closing h2 {
     font-size: 30px;
   }
@@ -756,8 +650,8 @@ h3 {
 }
 @media (max-width: 760px) {
   .principles article,
-  .principles article:first-child,
-  .principles article:last-child {
+.principles article:first-child,
+.principles article:last-child {
     padding: 22px 0 26px;
   }
   .principle-top {
@@ -777,19 +671,13 @@ h3 {
   .approach-heading h2 {
     font-size: 39px;
   }
-  .hero-art {
-    height: 282px;
-  }
+
   .closing-grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }
 }
-@media (max-width: 360px) {
-  .hero-art {
-    height: 265px;
-  }
-}
+
 .approach-heading h2 {
   font-size: clamp(34px, 3.2vw, 46px);
 }
@@ -846,7 +734,8 @@ h3 {
   }
 }
 
-/* The founding insight is a paired perspective, not a feature grid. */
+/* The founding insight is a paired perspective,
+not a feature grid. */
 .origin-heading {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -859,7 +748,7 @@ h3 {
   margin-top: 52px;
 }
 .perspective {
-  border-top: 1px solid #acbcbe;
+  border-top: 1px solid var(--line-strong);
   padding-top: 24px;
 }
 .perspective-label {
@@ -939,57 +828,206 @@ h3 {
   letter-spacing: 1.6px;
 }
 
-.tactile-art {
-  min-height: 540px;
-  overflow: hidden;
+/* Arca's mark,
+drawn large: the chest (arca) with the arch on its face {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 62%;
+  transform: translate(-50%, -54%);
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* Hero art: the original teaser's stacked covers, with Arca's mark on the top one. */
+.book-art {
+  --w: 330px;
+  position: relative;
+  min-height: 560px;
+  margin: 0;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orbit {
+  position: absolute;
+  width: calc(var(--w) * 1.4);
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  z-index: -2;
+}
+.orbit-wide {
+  width: calc(var(--w) * 1.7);
+  border-style: dashed;
+  opacity: 0.7;
+}
+.art-line {
+  position: absolute;
+  width: 115%;
+  height: 1px;
+  background: var(--line);
+  transform: rotate(-40deg);
+  z-index: -1;
+}
+.sheet {
+  position: absolute;
+  width: var(--w);
+  height: calc(var(--w) * 1.18);
+  border: 1px solid #b6a696;
+  border-radius: 3px 28px 3px 3px;
+  box-shadow: 0 12px 24px rgba(56, 41, 26, 0.06);
+}
+.sheet-back {
+  background: #ded6c7;
+  transform: translate(calc(var(--w) * 0.1), -9px) rotate(13deg);
+}
+.sheet-mid {
+  background: #c0c3b1;
+  border-color: #949d87;
+  transform: translate(calc(var(--w) * -0.07), 5px) rotate(-12deg);
+}
+.sheet-front {
+  position: relative;
+  background: var(--accent);
+  border-color: #8a3f24;
+  color: var(--cream);
+  transform: rotate(-3deg);
+  padding: 24px 26px 26px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.paper-art {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  object-fit: cover;
+.cover-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 1px;
 }
-.tactile-art .art-top,
-.tactile-art figcaption {
-  position: relative;
-  z-index: 1;
+.cover-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+.cover-status i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.cover-mark {
+  width: 58%;
+  align-self: center;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.cover-mark .seal {
+  fill: var(--seal);
+  stroke: var(--accent);
+}
+.cover-mark .imp {
+  stroke: currentColor;
+  opacity: 0.7;
+}
+.cover-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 247, 238, 0.45);
+  padding-top: 14px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.cover-name {
+  font-size: 46px;
+  line-height: 0.9;
+  letter-spacing: -2.5px;
+  font-weight: 450;
+}
+.book-art figcaption {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  .book-art {
+    --w: 270px;
+    min-height: 480px;
+  }
 }
 @media (max-width: 760px) {
-  .tactile-art {
-    height: 284px;
-    min-height: 0;
+  .book-art {
+    --w: 230px;
+    min-height: 400px;
+    overflow: hidden;
   }
-  .tactile-art .paper-art {
-    width: 82%;
-    height: 100%;
-    left: auto;
-    right: -24px;
-    object-fit: contain;
-    object-position: center;
-    mask-image: linear-gradient(to right, transparent, black 17%);
+  .cover-top {
+    font-size: 9px;
   }
-  .tactile-art figcaption {
-    position: absolute;
-    inset: auto;
-    left: 24px;
-    bottom: 28px;
-    display: block;
-    align-items: end;
+  .cover-name {
+    font-size: 36px;
   }
-  .tactile-art figcaption > span:last-child {
-    margin-top: 16px;
-    text-align: left;
+  .cover-bottom {
+    font-size: 11px;
+  }
+  .book-art figcaption {
+    font-size: 10px;
   }
 }
-@media (max-width: 360px) {
-  .tactile-art {
-    height: 264px;
+
+/* Display type: Newsreader, the original teaser's face and Arca's own display face. */
+h1,
+h2,
+h3,
+.cover-name {
+  font-family: Newsreader, Georgia, serif;
+}
+h1 {
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+h1 em {
+  font-style: italic;
+}
+h2 {
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+h3 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.perspective-label h3 {
+  font-family: Hanken, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+.cover-name {
+  font-size: 54px;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+}
+@media (min-width: 1101px) {
+  h1 {
+    font-size: clamp(56px, 6.4vw, 96px);
   }
-  .tactile-art figcaption {
-    left: 18px;
+}
+@media (max-width: 760px) {
+  .cover-name {
+    font-size: 42px;
   }
 }
