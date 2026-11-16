@@ -35,6 +35,33 @@ square and full bleed, with the mark centred so a circle crop keeps it whole.
 The X and LinkedIn banners keep their words on the right, because both sites
 put the profile picture over the bottom left.
 
+## Per platform
+
+`platforms/` has each site's files already at its recommended size, named for
+where they go. Upload them as they are. Banners come as PNG and JPG.
+
+| Platform | Files |
+| --- | --- |
+| Google Workspace | `profile-photo-800.png` (account and Chat photo); `admin-console-logo-320x132.png` (Admin console → Account → Personalization) |
+| GitHub | `org-avatar-500.png`; `social-preview-1280x640` (repo Settings → Social preview) |
+| LinkedIn | `company-logo-400.png`; `company-cover-1128x191`; `personal-banner-1584x396`; `shared-link-1200x627` |
+| X | `profile-400.png`; `header-1500x500` |
+| Facebook | `profile-720.png`; `cover-1640x624` (2× of the 820×312 desktop cover; words kept central for phones) |
+| Instagram, Threads | `profile-1080.png` |
+| YouTube | `channel-picture-800.png`; `banner-2560x1440` (words inside the 1546×423 area every device shows); `watermark-150.png` |
+| Slack | `workspace-icon-1024.png` |
+| Discord | `server-icon-1024.png`; `server-banner-960x540` |
+| Microsoft Teams | `team-picture-1024.png` |
+| Zoom | `profile-1024.png` |
+| Bluesky | `avatar-1000.png`; `banner-3000x1000` |
+| Mastodon | `avatar-400.png`; `header-1500x500` |
+| Gravatar | `avatar-2048.png` |
+
+Every profile picture is the terracotta avatar; they are all square and safe
+inside a circle crop. Sizes are each platform's published recommendation as of
+late 2026, rounded up where a site scales images down. If a site rejects a
+file, check its current size limit and use the nearest size in `avatar/`.
+
 ## Use
 
 - Prefer SVG wherever it is accepted, PNG otherwise, JPG only where
